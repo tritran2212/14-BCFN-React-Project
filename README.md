@@ -1,12 +1,37 @@
-# React + Vite
+# react project 
+- Format code: thong nhat 1 dangj format
+- Deloy len server
+- to chuc thu muc
+- Library can dung trong du an
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Khoi tao git 
+git init 
+- tao repo o githp va day code len 
+### format code
+suw dung thu vien prettier
+npm i prettier
+bash 
 
-Currently, two official plugins are available:
+prettier playground
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+Deploy len server
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ cau lenh gi de co the cai thi vien
+
+npm install
+cau lenh gi build duoc du an
+npm run build
+
+## tổ chức thư mục
+1 component
+2 Templates
+3 Pages
+4 Route
+5 Store
+6 Hooks (hiện tại ít sử dụng )
+7 Common
+7.1 Utils
+7.2 Helpers
+7.3 Constants
+8 Services (đổ call api)
