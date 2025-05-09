@@ -1,9 +1,6 @@
 
-
 import clsx from "clsx";
 import { useId } from "react";
-
-
 
 
 export function Input({
@@ -34,10 +31,11 @@ export function Input({
                     )}
                 />
                 {required && (
-                    <span className="absolute right-40 top-1/2 -translate-y-1/2 text-red-500">
+                    <span className="absolute right-0 top-1/2 -translate-y-1/2 text-red-500">
                         (*)
                     </span>
                 )}
+                
             </div>
 
 

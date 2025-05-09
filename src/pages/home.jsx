@@ -1,30 +1,21 @@
-import { useEffect, useState } from "react";
-import {CartIcon} from "../components/icons/cart";
-import {LinkIcon, ShoppingCartIcon} from "lucide-react"
+import { Link } from "react-router";
+import { ProductCard } from "../components/product-card/product-card";
+import { ProductFeature } from "./homes/product-feature";
+import {  Hero } from "./homes/hero";
 
 export  function Home(){
-    // const [c,setC] = useState(0);
 
-    // useEffect(()=>{
-    //     const  id = setInterval(()=>{
-    //         console.log("asdsadsa")
-    //         setC((c)=>c+1)
-    //     },200)
-    
-    //     return ()=>{
-    //         clearInterval(id)
-    //     }
-    // },[])
-   
    
     return (
         <>
-        {/* <Link to="/login">link </Link>
-        <h1 className="text-red-600 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, vel.</h1>
-        <CartIcon/> */}
-        <ShoppingCartIcon/>
-       {/* <h1>count{c}</h1> */}
-       
+
+        <Hero/>
+        <ProductFeature
+            
+        />
+        {/* <h1>WELCOME TO HOME PAGE</h1>
+        <Link to={'./login'}>Login</Link>
+        <Link to={'./sign-up'}>Register</Link> */}
         </>
         
     )

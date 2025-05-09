@@ -86,3 +86,28 @@ npx npm-check-updates -i
 
  - chỉ sử dụng  với icon
  - hoặc thay đổi component nào mà các bạn thấy gây ảnh hưởng  đến performance
+
+
+ ## Lazy load 
+ ## Code Splitting
+
+  - chỉ download những file cần thiết , chắc chắn người sẽ vào 
+
+
+
+  git merge --abort( Huy qua trinh conflict , sẽ làm lại từ đầu )
+
+
+
+  material ui 
+   ant design
+    fluentui
+    
+
+
+    1  khi vua vào trang web
+
+
+    # lưu redux  :cập nhật giao diẹn
+    # lưu localStorage :  k bị refresh trang
+    
