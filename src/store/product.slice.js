@@ -26,7 +26,7 @@ const  productSlice = createSlice({
 
                 // Nếu sảm phẩm đã có trong giỏ hàng 
                 // cập nhật số lượng mới nhất
-                newCarts[productIndex]=action.payload;
+                newCarts[productIndex]= action.payload;
             }else{
                 // nếu sản phẩm chưa có thêm vào
 
@@ -45,10 +45,10 @@ const  productSlice = createSlice({
             // }else{
             //     newCarts.push(action.payload);
             // }
-            // luwu redux
+            // Lưu redux 
 
             state.carts = newCarts;
-            // localStorage
+            // Lưu LocalStorage
 
             manageLocalStorage.set("carts", newCarts);
 

@@ -2,11 +2,13 @@ import { ShoppingCart } from "lucide-react";
 import { Link } from "react-router";
 import { Avatar } from "../../../components/avatar/avatar";
 import { useSelector } from "react-redux";
-import { ProfileSkeleton } from "./profile.skeleton";
+// import { ProfileSkeleton } from "./profile.skeleton";
 import { productReducer } from "../../../store/product.slice";
 import { manageLocalStorage } from "../../../common/utils";
 import { KEY_ACCESS_TOKEN } from "../../../common/constants";
-
+import {Menu} from "../components_/menu";
+import { useDispatch } from "react-redux";
+import { logout } from "../../../store/user.slice";
 function LogoIcon() {
 
 
@@ -24,6 +26,10 @@ function LogoIcon() {
 
 
 export function Header() {
+
+    const  dispath = useDispatch();
+
+
         const  user = useSelector(
             (store)=>{
                 return store.userReducer.user;
@@ -40,6 +46,8 @@ export function Header() {
         const  TOKEN = manageLocalStorage.get(KEY_ACCESS_TOKEN)
 
     return (
+
+        
         <>
             <header className="h-[50px] bg-black px-6 py-2 text-white  flex justify-between items-center">
                 
@@ -61,12 +69,27 @@ export function Header() {
 
                     
                        
-                        <ProfileSkeleton/>
+                        
                         {
                             user !== null ?(
+                                
                                 <div className="flex gap-2 items-center">
-                                <p>Tran.tri</p>
-                                <Avatar>D</Avatar>
+                                <Menu
+                                    list ={[
+                                        {id:1,child:<button onClick={()=>{
+                                            dispath(logout())
+                                        }}>Logout</button>},
+
+                                        {id:2,
+                                         child:<Link to="/change-password">Change Password</Link>
+                                        }
+                                    ]}
+                                  >
+                                    <p>Tran.tri</p>
+                                    <Avatar>D</Avatar>
+                                </Menu>
+                               
+                               
                                 </div>
                             ):(<div>
                                 <Link to="/login" className  ="border border-white px-2 py-1">Login</Link>

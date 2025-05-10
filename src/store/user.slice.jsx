@@ -1,4 +1,6 @@
 import {createSlice } from '@reduxjs/toolkit';
+import { manageLocalStorage } from '../common/utils';
+import { KEY_ACCESS_TOKEN } from '../common/constants';
 
 const  USER_FETCH_STATUS ={
     IDLE :
@@ -28,8 +30,12 @@ const  userSlice = createSlice({
                 
             },
         },
+        logout(state){
+                state.user = null ;
+                manageLocalStorage.remove(KEY_ACCESS_TOKEN)
+        }
 }
 )
 export  const  userReducer = userSlice.reducer;
 
-export  const  {setUser} = userSlice.actions;
+export  const  {setUser,logout} = userSlice.actions;

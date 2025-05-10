@@ -11,7 +11,7 @@ import { BaseTemplate } from '../template_s/base_/base.template';
 const  Login = lazy(()=>import('../pages/login'))
 const  Signup =lazy (()=>import('../pages/signup'))
 const  CardDetail =lazy (()=>import('../pages/card-detail'))
-
+const  ChangePassword = lazy(()=>import('../pages/change-password'))
 export const router = createBrowserRouter([
 
     {
@@ -28,6 +28,10 @@ export const router = createBrowserRouter([
                 path :"/card-detail/:id",
                element :<CardDetail/>
             },
+            {
+                path :"/change-password",
+               Component:ChangePassword
+            }
 
             
         ],
